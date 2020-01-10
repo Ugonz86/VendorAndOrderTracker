@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System;
-using Microsoft.AspnETcORE.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Tracker.Models;
 
 namespace Tracker.Controllers{
@@ -14,22 +14,22 @@ namespace Tracker.Controllers{
         }
 
         [HttpGet("/vendors/new")]
-        public actionResult New()
+        public ActionResult New()
         {
             return View();
         }
 
         [HttpGet("/vendors/{id}")]
-        public Actionresult Show(int id)
+        public ActionResult Show(int id)
         {
             Dictionary<string, object> model = new Dictionary<string, object>();
             Vendor selectedVendor = Vendor.Find(id);
             List<Order> vendorOrders = selectedVendor.Orders;
             model.Add("vendor", selectedVendor);
-            model.Add("orders", vendororders);
+            model.Add("orders", vendorOrders);
             return View(model);        
         }
 
-        
+
     }
 }
