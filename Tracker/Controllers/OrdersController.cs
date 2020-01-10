@@ -23,5 +23,12 @@ namespace Tracker.Controllers
             model.Add("vendor", vendor);
             return View(model);
         }
+
+        // [HttpPost("/vendors/{vendorId}/orders")]
+        // public ActionResult DeleteaLL()
+        // {
+        //     OrdersController.ClearAll();
+        //     return View();
+        // }
     }
 }

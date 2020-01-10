@@ -30,6 +30,13 @@ namespace Tracker.Controllers{
             return View(model);        
         }
 
+        // [HttpPost("/vendors")]
+        // public ActionResult DeleteALL()
+        // {
+        //     VendorsController.ClearAll();
+        //     return View();
+        // }
+
 
     }
 }
