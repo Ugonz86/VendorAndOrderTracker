@@ -19,7 +19,7 @@ namespace Tracker.Controllers{
             return View();
         }
 
-        [HttpPost(/vendors)]
+        [HttpPost("/vendors")]
         public ActionResult Create(string vendorName)
         {
             Vendor newVendor = new Vendor(vendorName);
@@ -44,6 +44,19 @@ namespace Tracker.Controllers{
         //     return View();
         // }
 
+         [HttpPost("/vendors/{vendorId}/orders")]
+        public ActionResult Create(int vendorId, string orderDescription, string quantityDescription, string priceDescription, string dateDescription)
+        {
+        Dictionary<string, object> model = new Dictionary<string, object>();
+        Vendor foundVendor = Vendor.Find(vendorId);
+        // DatePicker datePicker = new DatePicker();
+        Order newOrder = new Order(orderDescription, quantityDescription, priceDescription, dateDescription);
+        foundVendor.AddOrder(newOrder);
+        List<Order> vendorOrders = foundVendor.Orders;
+        model.Add("orders", vendorOrders);
+        model.Add("vendor", foundVendor);
+        return View("Show", model);
+        }
 
     }
 }

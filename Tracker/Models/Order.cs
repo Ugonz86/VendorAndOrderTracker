@@ -8,10 +8,10 @@ namespace Tracker.Models
        public string Quantity { get; set; }
        public string Price { get; set; }
        public string Date { get; set; }
-       public int Id { get; set; }
+       public int Id { get; }
        private static List<Order> _instances = new List<Order> { };
 
-       public Order(string description, string quantity, string price, string date )
+       public Order(string description, string quantity, string price, string date)
         {
             Description = description;
             Quantity = quantity;

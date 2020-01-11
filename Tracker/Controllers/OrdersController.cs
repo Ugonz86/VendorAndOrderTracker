@@ -6,7 +6,7 @@ namespace Tracker.Controllers
 {
     public class OrdersController : Controller
     {
-        [HttpGet("/vendor/{vendorId}/orders/new")]
+        [HttpGet("/vendors/{vendorId}/orders/new")]
         public ActionResult New(int vendorId)
         {
             Vendor vendor = Vendor.Find(vendorId);
@@ -22,6 +22,13 @@ namespace Tracker.Controllers
             model.Add("order", order);
             model.Add("vendor", vendor);
             return View(model);
+        }
+
+        [HttpPost("/orders/delete")]
+        public ActionResult DeleteAll()
+        {
+            Order.ClearAll();
+            return View();
         }
 
         // [HttpPost("/vendors/{vendorId}/orders")]
