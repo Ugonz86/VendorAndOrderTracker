@@ -1,0 +1,37 @@
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 300px;
+    
+  }
+
+  h1 {
+    font-size: 75px;
+  }
+
+  h3 {
+    font-size: 50px;
+  }
+
+  p {
+    font-size: 30px;
+  }
+
+  a {
+    color:#2dcf79;
+  }
+
+  a:hover {
+    color: #52ffa8;
+    text-decoration: none;
+  }
+
+  .btn-success { 
+    background-color: #2dcf79;
+    border: none;
+  }
+
+  .btn-success:hover {
+    background-color: #52ffa8;
+    border: none;
+  }

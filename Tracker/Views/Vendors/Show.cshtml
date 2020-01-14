@@ -1,3 +1,8 @@
+@{
+  Layout = "_Layout";
+}
+
+<center>
 @using Tracker.Models;
 <br>
 <br>
@@ -7,11 +12,11 @@
 <ol style="margin-left: 40px">
     @foreach (Order order in @Model["orders"])
     {
-        <li><i><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></i></li>
+        <h3><b><i><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></i></b></h3>
     }
 </ol>
-
-<h3 style="margin-left: 40px"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></h3>
 <br>
-<p style="margin-left: 40px"> <a href='vendors'>Back To Vendor Overview</a></p>
-<p style="margin-left: 40px"> <a href='/'>Back Home</a></p>
+<p style="margin-left: 40px"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add New Order</a></p>
+<p style="margin-left: 40px"> <a href='vendors'>Vendor Overview</a></p>
+<p style="margin-left: 40px"> <a href='/'>Home</a></p>
+</center>

@@ -32,7 +32,7 @@ namespace Tracker.Controllers
         }
 
         // [HttpPost("/vendors/{vendorId}/orders")]
-        // public ActionResult DeleteaLL()
+        // public ActionResult DeleteAll()
         // {
         //     OrdersController.ClearAll();
         //     return View();

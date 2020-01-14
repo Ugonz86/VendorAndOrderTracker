@@ -1,12 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+<center>
 <h1 style="margin-left: 40px"><b>Add a vendor</b></h1>
 <br>
 
 <form style="margin-left: 40px" action="/vendors" method="post">
 <label for="vendorName">Vendor Name</label>
 <input id="vendorName" name="vendorName" type="text">
-<button type="submit">Add</button>
+<button class="btn btn-success" type="submit">Add</button>
 </form>
 <br>
 
-<p style="margin-left: 40px"> <a href="/">Back Home</a></p>
-<p style="margin-left: 40px"> <a href="/vendors">Back To Vendor Overview</a></p>
+<p style="margin-left: 40px"> <a href="/">Home</a></p>
+<p style="margin-left: 40px"> <a href="/vendors">Vendor Overview</a></p>
+</center>
