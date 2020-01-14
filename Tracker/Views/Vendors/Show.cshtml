@@ -6,17 +6,17 @@
 @using Tracker.Models;
 <br>
 <br>
-<h1 style="margin-left: 40px"><b><i>@Model["vendor"].Description Orders</i></b></h1>
+<h1><b><i>@Model["vendor"].Description Orders</i></b></h1>
 <br>
 
-<ol style="margin-left: 40px">
-    @foreach (Order order in @Model["orders"])
+
+  @foreach (Order order in @Model["orders"])
     {
-        <h3><b><i><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></i></b></h3>
+      <h3><b><i><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Description</a></i></b></h3>
     }
-</ol>
+
 <br>
-<p style="margin-left: 40px"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add New Order</a></p>
-<p style="margin-left: 40px"> <a href='vendors'>Vendor Overview</a></p>
-<p style="margin-left: 40px"> <a href='/'>Home</a></p>
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add New Order</a></p>
+<p> <a href='/vendors'>Vendor Overview</a></p>
+<p> <a href='/'>Home</a></p>
 </center>
