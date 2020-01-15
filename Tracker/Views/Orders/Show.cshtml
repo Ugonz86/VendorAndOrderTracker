@@ -13,8 +13,12 @@
 <br>
 @* <p><a href='/vendors/@Model["vendor"].Id/order/@Model["order"].Id/orders/new'>Edit Order</a></p> *@
 
-<p><a href='/vendors/@Model["vendor"].Id/order/@Model["order"].Id/DeleteAll'>Delete Order</a></p>
+@* <p><a href='/vendors/@Model["vendor"].Id/order/@Model["order"].Id/delete'>Delete Order</a></p> *@
 
+<form action="/orders/delete" method="post">
+  <button class="btn btn-success" type='submit'>Delete Order</button>
+</form>
+<br>
 <p><a href='/vendors/@Model["vendor"].Id'>Order Overview</a></p>
 
 </center>

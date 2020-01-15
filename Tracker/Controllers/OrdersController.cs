@@ -24,11 +24,11 @@ namespace Tracker.Controllers
             return View(model);
         }
 
-        [HttpPost("/orders/delete")]
+        [HttpPost("/vendors/{vendorId}/orders/{orderId}/delete")]
         public ActionResult DeleteAll()
         {
-            Order.ClearAll();
-            return View();
+        Order.ClearAll();
+        return View();
         }
 
         // [HttpPost("/vendors/{vendorId}/orders")]
